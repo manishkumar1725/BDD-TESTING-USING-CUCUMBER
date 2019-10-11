@@ -1,4 +1,4 @@
-package com.example.cucumber_bdd;
+package demo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -14,6 +14,7 @@ import cucumber.api.java.en.When;
 
 public class PostDefs {
 	
+
 	String uri;
 	HttpHeaders headers;
 	RestTemplate restTemplate;
@@ -37,7 +38,8 @@ public class PostDefs {
 
 		this.restTemplate = new RestTemplate();
 		this.response = this.restTemplate.postForEntity(uri, entity, String.class);
-
+		
+	
 	}
 
 	@Then("^I receive valid Response$")
@@ -47,10 +49,5 @@ public class PostDefs {
 
 	}
 
+
 }
-
-//ResponseEntity represents an HTTP response, including headers, body, and status. 
-//While @ResponseBody puts the return value into the body of the response, 
-//ResponseEntity also allows us to add headers and status code.
-
-

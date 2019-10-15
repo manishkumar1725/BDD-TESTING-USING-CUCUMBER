@@ -34,5 +34,13 @@ public class ProductService {
 		repository.deleteById(id);
 		return "Product deleted";
 	}
+	
+	public String updateProduct(int id,Product product)
+	{
+		product.setId(id);
+		repository.save(product);
+		
+		return "Product updated";
+	}
 
 }

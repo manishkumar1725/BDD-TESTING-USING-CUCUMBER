@@ -20,6 +20,11 @@ Feature: Basic CRUD Operation
      When Send a DELETE_BY_ID HTTP request with 8 as ID
      Then I receive NO Response
      
+   Scenario: PUT_BY_ID employee record
+     Given I Set PUT_BY_ID employee service api endpoint
+     When Send a PUT_BY_ID HTTP request with 6 as ID
+     Then I receive content type as text/plain;charset=UTF-8
+     
      
      
    

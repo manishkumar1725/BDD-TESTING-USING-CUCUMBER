@@ -8,7 +8,7 @@ Feature: Basic CRUD Operation
    Scenario: GET_BY_ID employee record
      Given I Set GET_BY_ID employee service api endpoint
      When Send a GET_BY_ID HTTP request with 1 as Id
-     Then I receive status as 200 OK
+     Then I receive status as OK
      
    Scenario: POST employee record
      Given I Set POST employee service api endpoint
@@ -23,7 +23,7 @@ Feature: Basic CRUD Operation
    Scenario: PUT_BY_ID employee record
      Given I Set PUT_BY_ID employee service api endpoint
      When Send a PUT_BY_ID HTTP request with 6 as ID
-     Then I receive content type as text/plain;charset=UTF-8
+     Then I receive status as created
      
      
      

@@ -37,10 +37,10 @@ public class GetByIdDefs {
 
 	}
 
-	@Then("^I receive status as 200 OK$")
+	@Then("^I receive status as OK$")
 	public void verifyGetResponse() {
 
-		assertThat(response.getStatusCodeValue() == 200);
+		assertThat(response.getStatusCode().equals(HttpStatus.OK));
 
 	}
 

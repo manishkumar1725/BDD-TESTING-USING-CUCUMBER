@@ -49,7 +49,7 @@ public class PutDefs {
 		this.response =this.restTemplate.exchange(request, String.class);
 	}
 
-	@Then("^I receive content type as text/plain;charset=UTF-8$")
+	@Then("^I receive status as created$")
 	public void verifyPutResponse() {
 
 		assertThat(response.getStatusCode().equals(HttpStatus.CREATED));
